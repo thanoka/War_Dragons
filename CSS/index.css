@@ -1,0 +1,84 @@
+*{
+  font-family: 'anuratiregular';
+  color: white;
+  overflow: hidden;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-image: url(img/LobbyBackground.gif);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+  }
+  
+  #backgroundAudio{
+    position: absolute;
+    top: 0; left: 0;
+    display: none;
+  }
+  .container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+  }
+
+  img {
+    width: 500px;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    filter: grayscale(15%);
+  }
+
+
+  p { 
+    font-size: 30px;
+    animation: myAnima 2s ease 0s 1 normal forwards,
+    myBlink 2s ease 0s 1 normal forwards;
+  }
+  
+  @keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes myAnima {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(35vh);
+        opacity: 1;
+    }
+}
+
+@keyframes myBlink {
+
+    0% {
+        opacity: 1;
+        transform: translateY(35vh);
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+        transform: translateY(35vh);
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        transform: translateY(35vh);
+    }
+}

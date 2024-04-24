@@ -1,0 +1,185 @@
+.skill_side {
+  position: absolute;
+  right: 20px; bottom:0; translate: 0 9%;
+  width: 8%;
+  height: 85%;
+  aspect-ratio: 16/9;
+  perspective: 3200px;
+  border-radius: 5px;
+  z-index: 5;
+
+}
+.skill_side::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url(img/Skill/Skill-Background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: drop-shadow(8px 5px 10px #000000);
+  filter: grayscale(0.5);
+
+}
+
+.skill, .wait{
+  position: absolute;
+  top: 50%; left: 50%; translate: -50% -55%;
+  width: 75%;
+  height: 60%;
+  backface-visibility: hidden;
+  transition: ease-in-out 0.5s;
+}
+
+.skill{
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  grid-template-rows: repeat(4, 1fr);
+  transform: rotateY(0deg);
+  border-radius: 25px;
+}
+
+.wait{
+  color: white;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(-180deg);
+  background-color: rgba(165, 10, 41, 0);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-shadow: 7px 4px 9px rgba(0,0,0,0.6);
+
+}
+
+.skill-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(205,205,205);
+  background: radial-gradient(circle, rgba(205,205,205,1) 28%, rgba(170,63,36,1) 64%, rgba(71,6,6,1) 98%);
+  width:60px; height:60px;
+  border: black 2px solid;
+  border-radius: 50px;
+  padding: 10px;
+  filter: drop-shadow(2px 5px 10px #000000);
+}
+
+.skill-button img {
+  width: 50px;
+  height: 50px;
+}
+.skill-button .skill-image4, .skill-button .skill-image3{
+  width: 60px;
+  height: 60px;
+}
+.skill-button .skill-image5 , .skill-button .skill-image1{
+  width: 70px;
+  height: 70px;
+}
+
+
+.skill-button:hover {
+  border: white 2px solid;
+  background: rgb(205,205,205);
+  background: radial-gradient(circle, rgba(205,205,205,1) 28%, rgb(83, 36, 170) 64%, rgb(13, 6, 71) 98%);
+}
+
+.skill-button:active {
+  background-color: #b30000;
+}
+
+
+.skill-tip{
+  position: absolute;
+  left: 0; top: 0%; 
+  translate: 50% -50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 350px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 20;
+  filter: none;
+}
+
+.skill-button:hover .skill-tip {
+  left: 0; top: 50%; 
+  translate: -120% -50%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.skill-tip .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px rgba(255, 255, 255, 0.7) solid;
+  margin-bottom: 5px;
+}   
+
+.skill-tip .top .skill-info-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 175px;
+  color: white;
+}
+
+.skill-info-left .name {
+  font-size: 15px;
+  margin-left: 10px;
+}  
+
+.skill-tip .top .pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  width: 40px; 
+  height: 40px;
+  border: 1px rgba(255, 255, 255, 0.7) solid;
+  border-radius: 10px;
+}
+
+.skill-tip .top .pic img {
+  width: 40px;
+  height: 40px;
+}
+
+.skill-tip .top .skill-info-right {
+  margin-right: 5px;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  color: white;
+  font-size: 12px;
+}
+
+.skill-tip .bottom {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 15px;
+}

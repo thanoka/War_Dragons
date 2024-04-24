@@ -1,0 +1,230 @@
+*{
+    font-family: "Pixelify Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+:root {
+  --glitter: url("https://assets.codepen.io/13471/silver-glitter-background.png");
+}
+
+.screen {
+  position: relative;
+  background-image: url(img/bettle-Background2.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 10%; left: 50%; transform: translateX(-50%);
+  width: 45vw;
+  height: 15px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border: 1px gray solid;
+  z-index: 10;
+}
+
+
+.line::before,
+.line::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.line::before {
+    content: "";
+    background-image: var(--glitter), var(--glitter),
+        linear-gradient(
+            0deg,
+            white 0px,
+            #ec4b00 5px,
+            #e905059c 30%,
+            transparent 70%
+        ),
+        radial-gradient(ellipse at bottom, transparent 30%, black 60%);
+    background-size: 350px 500px, 400px 650px, 100% 100%, 100% 100%;
+    background-blend-mode: hard-light, color-dodge, multiply;
+    background-position: 0px 0px, 0px 0px, var(--gradientPos);
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    mix-blend-mode: color-dodge;
+    filter: brightness(3.7) blur(7px) contrast(6);
+    animation: fire 3s linear infinite;
+    box-shadow: inset 0 -40px 50px -60px #eb331b;
+}
+
+@keyframes fire {
+    0% {
+        background-position: center 0px, center 0px, 50% 100%, center center;
+    }
+    100% {
+        background-position: center -500px, center -650px, 50% 100%, center center;
+    }
+}
+
+.player_dot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(50%);
+  width: 70px;
+  height: 70px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 100px;
+  transition: transform 1s;
+}
+
+.player_dot img {
+  display: flex;
+  width: 90px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.player_Count{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  text-shadow: 4px 2px 4px rgba(255, 0, 0, 0.979);
+  color: white;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, 0%);
+}
+
+#backgroundAudio{
+  display: none;
+}
+
+.bot-health, .bot-health2 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(60%, -50%);
+  rotate: 90deg;
+  width: 200px;
+  height: 25px;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.bot-health2 {
+  transform: translate(-1150%, -50%);
+}
+
+.bot-health::-webkit-progress-value, .bot-health2::-webkit-progress-value{
+  background: darkred;
+}
+
+.bot-health::-webkit-progress-bar, .bot-health2::-webkit-progress-bar{
+  border: 2px black solid;
+}
+
+.bot img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%) scaleX(1);
+  width: 320px;
+  filter: drop-shadow(-9px 6px 7px #c20000);
+
+
+}
+
+.bot2 img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -57%) scaleX(1);
+  width: 850px;
+  z-index: 0;
+  filter: drop-shadow(-9px 6px 7px rgb(172, 1, 1));
+  animation: float 5s ease-in-out infinite;
+}
+.active{
+  animation-name: Damage;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1; 
+}
+.active2{
+  animation-name: Damage;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1; 
+}
+.bot2{
+  opacity: 0;
+  transition: all 2s;
+}
+
+.label1, .label2 {
+  width: 20px; 
+  height: 100px;
+  position: absolute;   
+  top: 20%;
+  left: 60%;
+  transform: translate(-80%, 30%) scaleX(1);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  
+}
+
+.label2 {
+  transform: translate(0 , -1000%);
+}
+
+@keyframes float {
+	0% {
+		filter: drop-shadow(2px 4px 11px #000000);
+		transform: translate(-40%, -57%)
+	}
+	50% {
+		filter: drop-shadow(2px 4px 11px #000000);
+		transform: translate(-40%, -60%)
+	}
+	100% {
+		filter: drop-shadow(2px 4px 11px #000000);
+		transform: translate(-40%, -57%)
+	}
+}
+
+@keyframes Damage {
+  0% { transform: translate(-50%, -45%) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  25% { transform: translate(-45%, -50%) rotate(1deg); 
+    filter: hue-rotate(45deg);
+  } 
+  75% { transform: translate(-55%, -40%) rotate(-1deg); 
+    filter: hue-rotate(45deg);
+  }
+  100% { transform: translate(-50%, -45%) rotate(01deg); 
+    filter: hue-rotate(0deg);
+  }
+
+  }
+
+  audio {
+    display: none;
+  }
+

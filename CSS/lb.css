@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    cursor:default;
+    color: white;
+    overflow: hidden;
+}
+
+#backgroundAudio{
+    display: none;
+}
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 600px 2fr;
+    background-color: #ffffff;
+    background-image: url(img/LobbyBackground.gif);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+
+.left {
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mc {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50%; left: 50%; translate: -50% -45%;
+    height: 100%;
+    width: 85%;
+    animation: float 5s ease-in-out infinite;
+    
+}
+
+.mc img {
+    width: 95%;
+    
+}
+
+@keyframes float {
+	0% {
+		filter: drop-shadow(2px 4px 11px #000000);
+		transform: translatey(0px);
+	}
+	50% {
+		filter: drop-shadow(2px 4px 11px #000000);
+		transform: translatey(-20px);
+	}
+	100% {
+		filter: drop-shadow(2px 4px 11px #000000);
+		transform: translatey(0px);
+	}
+}
+
+.menu {
+    position: absolute;
+    right: 6%; top: 0;
+    margin-right: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20PX;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu img {
+    
+    width: 100%;
+    filter: invert(1);
+
+}
+
+.setting, .notifi, .mail {
+    scale: 1;
+    transition: 0.2s;
+    cursor: pointer;
+    opacity: 0.65;
+    width: 35px;
+}
+
+.setting:hover {
+    scale: 1.2;
+    transition: 0.2s;
+    opacity: 1;
+}
+
+
+.notifi:hover {
+    scale: 1.2;
+    transition: 0.2s;
+    opacity: 1;
+}
+
+
+.mail:hover {
+    scale: 1.2;
+    transition: 0.2s;
+    opacity: 1;
+}
+
+.right {
+    position: relative;
+    
+}
+
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    display: grid;
+    top: 50%; right: 0; translate: -2.2% -50%;
+    grid-template-rows: repeat(2,1fr);
+    padding: 25px;
+    grid-row-gap: 10px;
+    /* transform: perspective(2000px) rotate3D(0, 1, 0, -20deg); */
+    transform: perspective(2500px) rotate3D(0, 1, 0, -20deg);
+}
+
+.top {
+    /* background-color: aquamarine; */
+    display: flex;
+    width: 100%;
+    scale: 0.95;
+    transition: 0.2s;
+    cursor: pointer;
+    position: relative;
+    background-color: #666666;
+    background-image: url(./img/dragonfire\ -\ Copy.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    transition: 0.2s;
+    filter: brightness(0.85);
+}
+
+.top:hover {
+    transition: 0.2s;
+    scale: 1;
+    filter: brightness(1);
+}
+
+.top h1{
+    font-size: 4.5em;
+    padding-left: 25px;
+    color: white;
+    user-select: none;
+}
+
+.bottom {
+    grid-template-rows: repeat(2,1fr);
+    display: grid;
+    grid-row-gap: 10px;
+
+}
+
+.player {
+    background-color: beige;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    scale: 0.95;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: url(./img/pl.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.8);
+}
+
+.player:hover {
+    scale: 1;
+    transition: 0.2s;
+    filter: brightness(1);
+}
+
+.player p {
+    padding-right: 25px;
+    font-size: 35px;
+    color: #ffffff;
+    user-select: none;
+}
+
+.bottom-half {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.shop {
+    /* background-color: burlywood; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    scale: 0.9;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: url(./img/shop2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    filter: brightness(0.85);
+    transition: 0.2s;
+    
+}
+
+.top, .player, .shop,.ach {
+    -webkit-box-shadow: 5px 5px 13px 2px #000000; 
+    box-shadow: 5px 5px 13px 2px #000000;
+}
+
+.shop:hover {
+    scale: 1;
+    transition: 0.2s;
+    filter: brightness(1);
+}
+
+.shop p {
+    padding-right: 25px;
+    font-size: 35px;
+    color: white;
+}
+
+.ach { 
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    scale: 0.9;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: url(./img/ach.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    filter: brightness(0.85);
+    transition: 0.2s;
+}
+
+.ach:hover {
+    scale: 1;
+    transition: 0.2s;
+    filter: brightness(1);
+}
+
+.ach p {
+    padding-right: 25px;
+    font-size: 35px;
+   color: white;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border: solid 3px rgb(255, 255, 255);
+    border-radius: 100%;
+    position: absolute;
+    top: 80%; left: 30%; translate: -50% -50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 25px;
+    scale: 1;
+    transition: 0.2s;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.circle:hover {
+    scale: 1.1;
+    transition: 0.2s;
+    opacity: 1;
+}
+
+.circle p {
+    color: white;}
+
+#ver {
+    color: white;
+    font-size: 13.5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+/* .cir {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+.R {
+    position: absolute;
+    bottom: 0; left: 10px;
+    color:yellow;
+    cursor: pointer;
+}
