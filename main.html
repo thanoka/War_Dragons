@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Dragons/Bettle</title>
+    <link rel="shortcut icon" type="game-icon" href="CSS/img/icon-game.png">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/playerCard.css">
+    <link rel="stylesheet" href="CSS/dialogs.css">
+    <link rel="stylesheet" href="CSS/action.css">
+    <link rel="stylesheet" href="CSS/skill.css">
+    <link rel="stylesheet" href="CSS/animation4.css">
+    <link rel="stylesheet" href="CSS/loading.css">
+    <script src="JS/constructor.js"></script>
+    <script src="JS/Data.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <div  class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    
+    <audio id="backgroundAudio" autoplay loop>
+        <source src="mp3/a-kind-of-battle-bgm-143849.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="screen">
+    </div>
+
+    <header class="line">
+        <div class="player_dot"> <img src="CSS/img/Skull.png" alt=""><p class="player_Count"></p></div>
+    </header>
+
+        <div class="bot"><img src="CSS/img/knight-1.png" alt="" class="bot-img"> </div>
+        <div class="bot2"><img src="CSS/img/Dragons3.webp" alt=""> </div>
+        <progress id="bot-health" class="bot-health" value="100" max="100" class="draons-img"> </progress>
+        <label class="label1"> Knight </label>
+        <progress id="bot-health2" class="bot-health2" value="350" max="350"></progress> 
+        <label class="label2"> Dragons </label>
+
+        <main class="container">
+            <div class="bossAction">
+                <div class="bossTail">
+                    <div class="item-bossTail">
+                        <img class="boss-tail hidden" id="gif4">
+                    </div>
+                </div>
+                <div class="bossFireball">
+                    <div class="item-bossFireball">
+                        <img class="boss-fireball hidden" id="gif5">
+                    </div>
+                </div>
+                <div class="bossWind">
+                    <div class="item-bossWind">
+                        <img class="boss-wind hidden" id="gif6">
+                    </div>
+                </div>
+                <div class="hellFire">
+                    <div class="item-hellFire">
+                        <img id="gif7" class="boss-hellFire hidden">
+                    </div>
+                </div>
+                <div class="kikiAttack">
+                    <div class="item-kikiAttack">
+                        <img class="kiki-attack hidden" id="gif8">
+                    </div>
+                </div>
+                <div class="playerHeal">
+                    <div class="itemHeal">
+                        <img class="player-heal hidden" id="gif9">
+                    </div>
+                </div>
+                <div class="playerShield">
+                    <div class="itemShield">
+                        <img class="player-shield" id="gif10">
+                    </div>
+                </div>
+            </div>
+            <div class="infomationBox">
+                <div class="player-profile">
+                    <img src="./CSS/img/player-icon.png" alt="Player Avatar">
+                </div>
+                <div class="player-details">
+                    <h2>Charlottè</h2>
+                    <div class="bars">
+                        <div class="bar">
+                            <h2>Health</h2>
+                            <label>
+                                <progress id="health" class="bar bar-fill" value="1000" max="1000"></progress>
+                            </label>
+                            <span id="hp-text" class="bar-text">HP: 1000/1000</span>
+                        </div>
+                        <div class="bar">
+                            <h2>MP</h2>
+                            <label>
+                                <progress id="mana" class="bar bar-fill" value="100" max="100"></progress>
+                            </label>
+                            <span id="mana-text" class="bar-text">MP: 100/100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="status">
+                    
+                </div>
+            </div>
+        </main>
+
+
+        <div class="skill_side">
+            <div class="skill" id="skill"></div>
+            <div class="wait" id="wait"> EMEMYTURN</div>
+        </div>
+
+
+    <div class="dialog">
+        <!-- <div class="dialog_head">Dialogs</div> -->
+        <div id="dialog_body" disabled><p class="diatext">LET'S BETTLE</p></div> 
+    </div>
+
+        <!-- animation -->
+
+        <div class="playerAction">
+            <div class="playerAttackNormal">
+                <div class="item-normalAttack">
+                    <img class="player-attack-normal hidden" id="gif1">
+                </div>
+            </div>
+            <div class="playerStrike">
+                <div class="item-strikeAttack">
+                    <img class="player-strike hidden" id="gif2">
+                </div>
+            </div>
+            <div class="playerUlti">
+                <div class="item-ultiAttack">
+                    <img class="player-ulti hidden" id="gif3">
+                </div>
+            </div>
+        </div>
+    
+        <!-- <div class="botButton">
+            <button onclick="bossTail()">Boss Tail</button>
+            <button onclick="bossFireball()">Boss Fireboss</button>
+            <button onclick="bossWind()">Boss Wind</button>
+            <button onclick="hellFire()">Hell Fire</button>
+            <button onclick="kikiAttack()">Kiki Attack</button>
+            <button onclick="playerHeal()">Player Heal</button>
+            <button onclick="playerShield()">Player Shield</button>
+        </div> -->
+
+        
+        <script src="JS/back.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <audio id="shieldEffect" src="mp3/shield-effect.mp3"></audio>
+        <audio id="playerHealSound"src="mp3/heal-effect.mp3"></audio>
+        <script src="JS/animation4.js"></script>
+        <script src="JS/loading.js"></script>
+</body>
+</html>

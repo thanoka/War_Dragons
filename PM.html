@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="game-icon" href="CSS/img/icon-game.png">
+    <link rel="stylesheet" href="CSS/PM.css">
+    <link rel="stylesheet" href="CSS/loading.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    <title>War Dragons/Player menagement</title>
+    
+    
+</head>
+<body>
+    <div class="R">PRESS "R" TO RESET</div>
+    <audio id="backgroundAudio" autoplay loop>
+        <source src="mp3/sad-piano-loop-90bpm-136465.mp3" type="audio/mpeg">
+    </audio>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <div class="confirm" onclick="confirm()">
+        <button class="button-53" role="button">back</button>
+    </div>
+    <div class="YrN-transalent"></div>
+    <div class="YrN">
+        <div class="YrN-Container">
+            <div class="item-top">
+                <div class="img-box">
+                    <div class="img-box-sup">
+                        <img class="item-img" src="" alt="">
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="item-name"> hamamimiga </div>
+                    <div class="item-rearlity">RARE</div>
+                </div>
+            </div>
+            <div class="item-info">
+                <div class="item-story">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ullam voluptatem doloremque, perspiciatis facere exercitationem porro consectetur! Dolor eveniet vero deserunt esse laborum porro quaerat molestiae quidem nesciunt, amet et?
+                </div>
+                <hr>
+                <div class="item-status">
+                    <p class="RM">ReMove: 0</p>
+                    <p class="ATK">ATK: 0</p>
+                    <p class="MB">M.Buff: 0</p>
+                    <p class="HB">H.Buff: 0</p>
+                    <p class="AGI">AGI: 0</p>
+                </div>
+            </div>
+
+            <div class="btn">
+                <div class="yes">
+                    <span>YES</span>
+                    <div class="top"></div>
+                    <div class="left"></div>
+                    <div class="bottom"></div>
+                    <div class="right"></div>
+                </div> 
+                <div class="no" id="id-no" onclick="closeDesc()">
+                    <span>NO</span>
+                    <div class="top"></div>
+                    <div class="left"></div>
+                    <div class="bottom"></div>
+                    <div class="right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainbox">
+        <div class="inventory">
+            <!-- inventory main white -->
+            <div class="main-inventory">
+                <div class="name-of-user-choose">
+                    <h4>Inventory</h4>
+                </div>
+                <!-- ปุ่ม -->
+                <div class="contaner-carddd">
+                    <div class="inventorycard">
+
+                        <div class="invent-box-sub-front">
+                            <!-- Injs -->
+                        </div>
+                        <div class="count"> 0/ 5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="charactor-box">
+            <div class="main-cha-box">
+                <div class="cha-info">
+                    <div class="name-cha-box">
+                        <h3>Charlottè Lv.70</h3>
+                    </div>
+
+                    <div class="img-cha-box">
+                        <img src="CSS/img/player4.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skillbox">
+                <div class="skill">
+                    <h2>Skill</h2>
+                    <div class="skill-container">
+                        <img src="CSS/img/Skill/Normal Attack.png" alt="">
+                        <img src="CSS/img/Skill/Strike.png" alt="">
+                        <img src="CSS/img/Skill/Heal.png" alt="">
+                        <img src="CSS/img/Skill/Ult.png" alt="">
+                        <img src="CSS/img/Skill/Shield.png" alt="">
+                    </div>
+                </div>
+                <div class="player-info">
+                    <div class="playerinfo-sub">
+                        <!-- InJs -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <audio id="beep1" preload="auto">
+            <source src="mp3/click-21156.mp3">
+        </audio>
+        <audio id="beep2" preload="auto">
+            <source src="mp3/click-button-131479.mp3">
+        </audio> -->
+    </div>
+
+    <script src="JS/weapon-DATA.js"></script>
+    <script src="JS/PM.js"></script>
+    <script src="JS/loading.js"></script>
+
+</body>
+</html>

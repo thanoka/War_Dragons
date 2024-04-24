@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Dragons/MAP</title>
+    <link rel="shortcut icon" type="game-icon" href="CSS/img/icon-game.png">
+    <link rel="stylesheet" href="CSS/M.css">
+    <link rel="stylesheet" href="CSS/loading.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <audio autoplay loop>
+        <source src="mp3/ocean-waves-birdsong.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <button class="MExit" onclick="window.location.href = 'lb.html';">Exit</button>
+        <div class="btn-box">
+            <div class="main1"><img class="BT01" src="CSS/img/stage/stage_1-9.png" alt="" width="80px" height="100px" ><p class="map_Count">01</p><img class="star-state" src="CSS/img/stage/golden-stars.png" alt=""></div>
+            <div class="main2"><img class="BT02" src="CSS/img/stage/stage_1-9.png" alt="" width="80px" height="100px" ><p class="map_Count">02</p><img class="star-state" src="CSS/img/stage/golden-stars.png" alt=""></div>
+            <div class="main3"><img class="BT03" src="CSS/img/stage/stage_1-9.png" alt="" width="80px" height="100px" ><p class="map_Count">03</p><img class="star-state" src="CSS/img/stage/golden-stars.png" alt=""></div>
+            <div class="main4"><img class="BT04" src="CSS/img/stage/stage_1-9.png" alt="" width="80px" height="100px" ><p class="map_Count">04</p><img class="star-state" src="CSS/img/stage/golden-stars.png" alt=""></div>
+            <div class="main5"><img class="BT05" src="CSS/img/stage/stage_1-9.png" alt="" width="80px" height="100px" ><p class="map_Count">05</p><img class="star-state" src="CSS/img/stage/golden-stars.png" alt=""></div> 
+            <div class="main6"><img class="BT06" src="CSS/img/stage/stage_1-9.png" alt="" width="80px" height="100px" ><p class="map_Count">06</p><img class="star-state" src="CSS/img/stage/golden-stars.png" alt=""></div>
+            <div class="main7"><img class="BT07" src="CSS/img/stage/stage_1-9.png" alt="" width="80px" height="100px" ><p class="map_Count">07</p><img class="star-state" src="CSS/img/stage/golden-stars.png" alt=""></div>
+            <div class="main8"><img class="BT08" src="CSS/img/stage/stage_1-9.png" alt="" width="80px" height="100px" ><p class="map_Count">08</p><img class="star-state" src="CSS/img/stage/golden-stars.png" alt=""></div>
+            <div class="main9"><img class="BT09" src="CSS/img/stage/stage_1-9.png" alt="" width="80px" height="100px" ><p class="map_Count">09</p><img class="star-state" src="CSS/img/stage/golden-stars.png" alt=""></div>
+            <div class="main10"><img class="BT10" src="CSS/img/stage/stage_10.png"  alt="" width="80px" height="100px" onclick="showpopup10()"><p class="map_Count">10</p></div>
+        </div>
+        <div class="coni">
+            <div class="bg"></div>
+
+            <div class="popup10">
+                <section class="top">
+                    <div class="MC" onclick="window.location.href = 'PM.html';">
+                        <img src="CSS/img/player4.png" alt="">
+                        <div class="Status">
+                            <div class="sta">
+                                    <p class="ATK1">ATK : 0</p>
+                                    <p class="RM">Re.M : 0%</p>
+                                    <p class="MB">M.Buff : 0%</p>
+                                    <p class="HB">H.Buff : 0%</p>
+                                    <p class="AGI">AGI : 0%</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="btt">
+                    <h1 class="Enemy">Enemy Info</h1>
+                    <div class="info">
+                        <div class="mon1"><img src="CSS/img/knight-1.png" alt=""> <p class="p-text">Minnion</p></div>
+                        <div class="Boss"><img src="CSS/img/Dragons3.webp" alt=""> <p class="p-text">BOSS</p></div>
+                    </div>
+                    <!-- <div class="star"><img src="CSS/img/stage/golden-stars.png" alt="" ></div> -->
+                    <div class="mission">
+                        <p class="miss1">"complete the stage"</p>
+                        <p class="miss2">"Use Ultimate skill less than 2 time"</p>
+                        <p class="miss3">"less than 10 turns"</p>
+                    </div>
+                    <div class="btn">
+                        <button class="st-10" onclick="window.location.href = 'main.html';">Start</button>
+                        <button class="cls-10" onclick="cls10()">Exit</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="JS/M.js"></script>
+<script src="JS/loading.js"></script>
+</html>
